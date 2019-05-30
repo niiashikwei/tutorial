@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import {StyleSheet, Text, View} from 'react-native'
 
 const PresentationalComponent = (props) => {
     return (
         <View>
-            <Text onPress = {props.updateState}>
+            <Text style = {styles.container}>
                 {props.myState}
             </Text>
         </View>
     )
 }
 export default PresentationalComponent
+
+const styles = StyleSheet.create({
+    container: {
+        marginTop: 20,
+        textAlign: 'center',
+        color: 'blue',
+        fontWeight: 'bold',
+        fontSize: 20
+    }
+})
