@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import PresentationalComponent from "./PresentationalComponent";
 
-export default class App extends React.Component {
+class Home extends React.Component {
   constructor() {
     super();
     this.updateState = this.updateState.bind(this);
@@ -17,7 +16,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <PresentationalComponent myState = {this.state.myState} updateState = {this.updateState} />
+        <Text onPress = {this.updateState}> {this.state.myState} </Text>
       </View>
     );
   }
@@ -31,3 +30,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default Home;
