@@ -1,9 +1,9 @@
 import React from 'react';
-import Inputs from './inputs.js'
+import ScrollViewExample from './scroll_view.js'
 
 const App = () => {
   return (
-      <Inputs />
+      <ScrollViewExample />
   )
 }
 export default App
