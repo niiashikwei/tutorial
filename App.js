@@ -1,9 +1,9 @@
 import React from 'react';
-import ImagesExample from './images_example.js'
+import HttpExample from './http_example.js'
 
 const App = () => {
   return (
-      <ImagesExample />
+      <HttpExample />
   )
 }
 export default App
