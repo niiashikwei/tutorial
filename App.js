@@ -1,27 +1,40 @@
-import React from 'react'
-import { View, TouchableWithoutFeedback, Text, StyleSheet } from 'react-native'
+import React, { Component } from 'react'
+import { View, StyleSheet, Animated, TouchableOpacity } from 'react-native'
 
-const App = (props) => {
-  return (
-      <View style = {styles.container}>
-        <TouchableWithoutFeedback>
-          <Text>
-            Button
-          </Text>
-        </TouchableWithoutFeedback>
-      </View>
-  )
+class Animations extends Component {
+  componentWillMount = () => {
+    this.animatedWidth = new Animated.Value(50)
+    this.animatedHeight = new Animated.Value(100)
+  }
+  animatedBox = () => {
+    Animated.timing(this.animatedWidth, {
+      toValue: 200,
+      duration: 1000
+    }).start()
+    Animated.timing(this.animatedHeight, {
+      toValue: 500,
+      duration: 500
+    }).start()
+  }
+  render() {
+    const animatedStyle = { width: this.animatedWidth, height: this.animatedHeight }
+    return (
+        <TouchableOpacity style = {styles.container} onPress = {this.animatedBox}>
+          <Animated.View style = {[styles.box, animatedStyle]}/>
+        </TouchableOpacity>
+    )
+  }
 }
-export default App
+export default Animations
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  text: {
-    borderWidth: 1,
-    padding: 25,
-    borderColor: 'black',
-    backgroundColor: 'red'
+  box: {
+    backgroundColor: 'blue',
+    width: 50,
+    height: 100
   }
 })
