@@ -1,34 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { TouchableOpacity, Text } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
-class Home extends React.Component {
-  constructor() {
-    super();
-    this.updateState = this.updateState.bind(this);
-  }
-  state = {
-    myState: 'I like green eggs and ham.'
-  }
-
-  updateState() {
-    this.setState({myState: 'The state is updated'});
-  }
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text onPress = {this.updateState}> {this.state.myState} </Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
+const Home = () => {
+  const goToAbout = () => {
+    Actions.about()
+  };
+  return (
+      <TouchableOpacity style = {{ margin: 128 }} onPress = {goToAbout}>
+        <Text>This is HOME!</Text>
+      </TouchableOpacity>
+  );
+};
 export default Home;
