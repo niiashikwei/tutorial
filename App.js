@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import WebViewExample from './web_view_example.js'
+import ModalExample from './modal_example.js'
 
 const App = () => {
     return (
-        <WebViewExample/>
+        <ModalExample/>
     )
 }
 export default App;
