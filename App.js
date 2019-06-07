@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import WebViewExample from './web_view_example.js'
 
 const App = () => {
-  return (
-      <View>
-        <View>
-          <Text>This is my text</Text>
-        </View>
-      </View>
-  )
+    return (
+        <WebViewExample/>
+    )
 }
-export default App
+export default App;
