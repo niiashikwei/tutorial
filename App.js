@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import ModalExample from './modal_example.js'
+import ActivityIndicatorExample from './activity_indicator_example.js'
 
 const App = () => {
     return (
-        <ModalExample/>
+        <ActivityIndicatorExample />
     )
 }
 export default App;
