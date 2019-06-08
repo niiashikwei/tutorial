@@ -1,9 +1,9 @@
-import React from 'react'
-import PickerExample from './picker_example.js'
+import React, { Component } from 'react';
+import { StatusBar } from 'react-native'
 
 const App = () => {
     return (
-        <PickerExample />
+        <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "#00BCD4" translucent = {true}> foobar</StatusBar>
     )
 }
 export default App
