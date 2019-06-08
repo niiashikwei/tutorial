@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import TextExample from './text_example.js'
+import React from 'react'
+import AlertExample from './alert_example.js'
 
 const App = () => {
     return (
-        <TextExample/>
+        <AlertExample />
     )
 }
 export default App
