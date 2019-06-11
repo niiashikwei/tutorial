@@ -12,7 +12,8 @@
     "react-native-router-flux": "^4.0.6"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "babel-preset-expo": "^5.0.0",
+    "expo-cli": "^2.19.4"
   },
   "private": true
 }

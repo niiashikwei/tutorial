@@ -1,9 +1,9 @@
 import React from 'react'
-import AlertExample from './alert_example.js'
+import GeolocationExample from './geolocation_example.js'
 
 const App = () => {
     return (
-        <AlertExample />
+        <GeolocationExample />
     )
 }
 export default App
